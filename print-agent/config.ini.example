@@ -1,0 +1,24 @@
+; Copie para config.ini e ajuste.  (o install-agent.ps1 faz isso e pergunta os valores)
+
+[server]
+; Endereço do servidor na rede do hospital (sem internet). Ex.: http://192.168.1.100
+url = http://192.168.1.100
+; Token gerado em: Impressão > Agentes de impressão > Novo agente (mostrado uma única vez)
+token = COLE_AQUI_O_TOKEN
+
+[printer]
+; windows = impressora instalada no Windows (USB) — envia ESC/POS RAW  (requer pywin32)
+; tcp     = impressora de rede direto pelo agente (host/port)
+; cups    = Linux/macOS
+; file    = teste sem impressora (grava arquivos em 'folder')
+mode = windows
+; Nome EXATO da impressora no Windows (Painel de Controle > Dispositivos e Impressoras).
+; Vazio = impressora padrão do Windows.
+name = EPSON TM-T20
+; host = 192.168.1.50
+; port = 9100
+; folder = C:\senhas-spool
+
+[agent]
+; Intervalo de consulta ao servidor (segundos)
+poll_seconds = 1.5

@@ -1,0 +1,2 @@
+# Somente Windows (modo "windows"). Nos demais modos o agente não precisa de nada.
+pywin32>=306; sys_platform == "win32"

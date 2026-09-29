@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+*.db
+*.db-wal
+*.db-shm
+data/
+backups/
+*.log
+.pytest_cache/
+print-agent/config.ini
+print-agent/*.spool
+node_modules/

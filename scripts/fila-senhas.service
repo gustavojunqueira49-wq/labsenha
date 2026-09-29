@@ -1,0 +1,15 @@
+# Copie para /etc/systemd/system/, ajuste User e caminhos, depois:
+#   systemctl daemon-reload && systemctl enable --now fila-senhas
+[Unit]
+Description=Fila de Senhas - Laboratorio
+After=network.target postgresql.service
+
+[Service]
+User=senhas
+WorkingDirectory=/opt/fila-senhas/backend
+ExecStart=/opt/fila-senhas/backend/.venv/bin/python -m app.cli run
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
